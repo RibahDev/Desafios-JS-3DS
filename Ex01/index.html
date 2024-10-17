@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Desenvolvimento de Sistemas</h1>
+    <img id="imagem" src="" alt="Imagem do Semestre">
+
+    <script>
+        const images = [
+            'img/img1.jpg',
+            'img/img2.jpg',
+            'img/img3.jpg',
+            'img/img4.jpg',
+        ];
+
+        function mudarImagem() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            document.getElementById('imagem').src = images[randomIndex];
+        }
+
+        window.onload = mudarImagem;
+
+    </script>
+
+</body>
+</html>

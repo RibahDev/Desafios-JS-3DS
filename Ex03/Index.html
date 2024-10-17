@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ícones do Sistema Operacional</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .icon-container {
+            display: flex;
+            gap: 20px;
+        }
+        .icon {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .icon img {
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.3s;
+        }
+        .large {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px; /* Tamanho maior */
+            height: 150px; /* Tamanho maior */
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .active .large {
+            opacity: 1;
+        }
+        .active img {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="icon-container">
+        <div class="icon">
+            <img src="img/chrome-1.png" alt="Ícone 1">
+            <img src="img/chrome-2.png" alt="Ícone 1 maior" class="large">
+        </div>
+        <div class="icon">
+            <img src="img/cloud-1.png" alt="Ícone 2">
+            <img src="img/cloud-2.png" alt="Ícone 2 maior" class="large">
+        </div>
+        <div class="icon">
+            <img src="img/discord-1.png" alt="Ícone 3">
+            <img src="img/discord-2.png" alt="Ícone 3 maior" class="large">
+        </div>
+        <div class="icon">
+            <img src="img/figma-1.png" alt="Ícone 4">
+            <img src="img/figma-2.png" alt="Ícone 4 maior" class="large">
+        </div>
+        <div class="icon">
+            <img src="img/img1.png" alt="Ícone 5">
+            <img src="img/img2.png" alt="Ícone 5 maior" class="large">
+        </div>
+        <div class="icon">
+            <img src="img/img1.png" alt="Ícone 6">
+            <img src="img/img2.png" alt="Ícone 6 maior" class="large">
+        </div>
+        <div class="icon">
+            <img src="img/img1.png" alt="Ícone 7">
+            <img src="img/img2.png" alt="Ícone 7 maior" class="large">
+        </div>
+        <div class="icon">
+            <img src="img/img1.png" alt="Ícone 8">
+            <img src="img/img2.png" alt="Ícone 8 maior" class="large">
+        </div>
+        <div class="icon">
+            <img src="img/img1.png" alt="Ícone 9">
+            <img src="img/img2.png" alt="Ícone 9 maior" class="large">
+        </div>
+        <div class="icon">
+            <img src="img/img1.png" alt="Ícone 10">
+            <img src="img/img2.png" alt="Ícone 10 maior" class="large">
+        </div>
+    </div>
+
+    <script>
+        const icons = document.querySelectorAll('.icon');
+
+        icons.forEach(icon => {
+            icon.addEventListener('mouseenter', () => {
+                icon.classList.add('active');
+            });
+
+            icon.addEventListener('mouseleave', () => {
+                icon.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca texto com imagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="titulo"></h1>
+    <img id="imagem" src="" alt="Imagem do Semestre">
+
+    <script>
+        const names = [
+            'CsGO2',
+            'Dragon Ball Z Sparkin Zero',
+            'The Witcher 3',
+            'Minecraft'
+        ];
+        const images = [
+            'img/img1.png',
+            'img/img2.jpg',
+            'img/img3.jpg',
+            'img/img4.jpg',
+        ];
+
+        const randomIndex = Math.floor(Math.random() * names.length);
+        
+        document.getElementById('titulo').innerText = names[randomIndex];
+        document.getElementById('imagem').src = images[randomIndex];
+
+    </script>
+</body>
+</html>
